@@ -87,7 +87,7 @@ const onResetScore = () => {
     <>
       <div>
           <Header onStartGame={onStartGame} onResetScore={onResetScore}/>
-          <PlayArea playerCard={playerCards} dealerCard={dealerCards} showDealerCards={showDealerCard} gameState={gameState} showButtons={showButtons} onHit={onHit} onStand={onStand} />
+          <PlayArea playerCard={playerCards} dealerCard={dealerCards} gameOver={gameOver} showDealerCards={showDealerCard} gameState={gameState} showButtons={showButtons} onHit={onHit} onStand={onStand} />
           <Stats wins={wins} draws={draws} losses={losses}/>
       </div>
     </>
