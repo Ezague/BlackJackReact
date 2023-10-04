@@ -1,8 +1,45 @@
-# React + Vite
+# BlackJack React application created with Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Hvad kan programmet?
+Funktionelt BlackJack spil med de mest kendte features fra et rigtigt spil BlackJack i kasinoerne (uden betting)..
 
-Currently, two official plugins are available:
+### Instruktioner
+* For at få programmet til at køre optimalt, skal du download [node.js](https://nodejs.org/en), og skrive følgende i terminalen for projektet:
+* npm i
+    * Det installerer de påkrævet ting for at køre projektet.
+* npm run dev
+    * Det kører programmet i et development environment.
+* npm run build (til de nørdede)
+    * Dette bygger projektet og derefter kan du køre det i et production environment.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Spillets regler
+* Du vinder hvis en af følgende krav er opfyldt:
+    * Spillerens hånd giver 21 i alt.
+    * Dealeres hånd giver over 21 i alt.
+* Du taber hvis en af følgende krav er opfyldt:
+    * Spillerens hånd giver over 21 i alt.
+    * Dealerens hånd giver 21 i alt.
+* Spillet afsluttet som uafgjort hvis følgende krav er opfyldt:
+    * Spillerens hånd og dealerens hånd giver det samme.
+
+### ToDo Liste
+* Skjul dealerens første kort indtil spillet er afsluttet.
+* Integrer en form for betting.
+* Integrer LocalStorage eller anden form for datalagring, så spillet gemmes ved lukning af browser.
+
+### Changelog
+*
+
+### Kendte bugs
+*
+
+### Bug reporting
+* Oplever du fejl i programmet, er du velkommen til at [raise et issue](https://github.com/Ezague/BlackJackReact/issues) her på github, så jeg bliver underrettet om given fejl.
+
+### Forfatter
+* [Ezague](https://github.com/Ezague)
+
+Andre brugbare links:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) bruger [Babel](https://babeljs.io/) for hurtigere refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) bruger [SWC](https://swc.rs/) for hurtigere refresh
