@@ -16,9 +16,11 @@ Funktionelt BlackJack spil med de mest kendte features fra et rigtigt spil Black
 * Du vinder hvis en af følgende krav er opfyldt:
     * Spillerens hånd giver 21 i alt.
     * Dealeres hånd giver over 21 i alt.
+    * Dealerens hånd er lig med eller over 17 og spillerens hånd er højere, men stadig under 21.
 * Du taber hvis en af følgende krav er opfyldt:
     * Spillerens hånd giver over 21 i alt.
     * Dealerens hånd giver 21 i alt.
+    * Dealerens hånd er lig med eller over 17 og spillerens hånd er lavere
 * Spillet afsluttet som uafgjort hvis følgende krav er opfyldt:
     * Spillerens hånd og dealerens hånd giver det samme.
 
@@ -28,7 +30,7 @@ Funktionelt BlackJack spil med de mest kendte features fra et rigtigt spil Black
 * Integrer LocalStorage eller anden form for datalagring, så spillet gemmes ved lukning af browser.
 
 ### Changelog
-*
+* Tilføjet logikken bag stand funktionen.
 
 ### Kendte bugs
 *
