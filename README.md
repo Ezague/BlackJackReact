@@ -25,12 +25,13 @@ Funktionelt BlackJack spil med de mest kendte features fra et rigtigt spil Black
     * Spillerens hånd og dealerens hånd giver det samme.
 
 ### ToDo Liste
-* Skjul dealerens første kort indtil spillet er afsluttet.
+* ~~Skjul dealerens første kort indtil spillet er afsluttet.~~
 * Integrer en form for betting.
 * Integrer LocalStorage eller anden form for datalagring, så spillet gemmes ved lukning af browser.
 
 ### Changelog
 * Tilføjet logikken bag stand funktionen.
+* Skjul dealerens første kort indtil spillet er afsluttet.
 
 ### Kendte bugs
 *
