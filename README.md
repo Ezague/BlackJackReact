@@ -1,4 +1,4 @@
-# BlackJack React application created with Vite
+# BlackJack React applikation lavet med Vite
 
 ### Hvad kan programmet?
 Funktionelt BlackJack spil med de mest kendte features fra et rigtigt spil BlackJack i kasinoerne (uden betting)..
