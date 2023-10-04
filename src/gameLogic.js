@@ -1,11 +1,11 @@
-export function checkRoundState(playerCards, dealerCards) {
+export function checkRoundState(playerCards, dealerCards, gameOver) {
     var playerHandPoints = handTotal(playerCards);
     var dealerHandPoints = handTotal(dealerCards);
 
-    if (playerHandPoints == 21 || dealerHandPoints > 21) {
+    if (playerHandPoints == 21 || dealerHandPoints > 21 || (playerHandPoints > dealerHandPoints && gameOver == true)) {
         return 'You won!';
     }
-    if (playerHandPoints > 21 || dealerHandPoints == 21) {
+    if (playerHandPoints > 21 || dealerHandPoints == 21 || (playerHandPoints < dealerHandPoints && gameOver == true)) {
         return 'You lost!';
     }
     if (playerHandPoints == dealerHandPoints) {

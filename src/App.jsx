@@ -19,10 +19,11 @@ const [draws, setDraws] = useState(0);
 const [showButtons, setShowButtons] = useState(false);
 const [showDealerCard, setShowDealerCard] = useState('???');
 const [gameState, setGameState] = useState(null);
+const [gameOver, setGameOver] = useState(false);
 
 useEffect(() => {
   if (playerCards.length === 0 || dealerCards.length === 0) return;
-  const status = checkRoundState(playerCards, dealerCards)
+  const status = checkRoundState(playerCards, dealerCards, gameOver)
   if (status === null) return;
   if (status === 'You won!') {
     setWins((currentValue) => currentValue + 1);
@@ -40,7 +41,7 @@ useEffect(() => {
     setShowDealerCard(handTotal(dealerCards));
   }
   setGameState(status);
-}, [playerCards, dealerCards])
+}, [playerCards, dealerCards, gameOver])
 
 const onStartGame = () => {
   setDeck(preGameSetup());
@@ -54,6 +55,7 @@ const onStartGame = () => {
   setShowButtons(true);
   setShowDealerCard('???');
   setGameState(null);
+  setGameOver(false);
 }
 
 const onHit = () => {
@@ -63,9 +65,16 @@ const onHit = () => {
 }
 
 const onStand = () => {
-  const [dealerCard, b] = drawCard(deck);
-  setDealerCards((currentValue) => [...currentValue, dealerCard]);
-  setDeck(b);
+  let dealernewCards = dealerCards;
+  let decknew = deck;
+  while(handTotal(dealernewCards) < 17) {
+    const [dealerCard, b] = drawCard(deck);
+    dealernewCards = [...dealernewCards, dealerCard];
+    decknew = b;
+  }
+  setDealerCards(dealernewCards);
+  setDeck(decknew);
+  setGameOver(true);
 }
 
 const onResetScore = () => {
