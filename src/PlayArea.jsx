@@ -3,7 +3,7 @@ import { Button, ButtonGroup, Grid, GridItem, Text, LightMode } from "@chakra-ui
 import { Cards } from "./Cards";
 import { handTotal } from "./gameLogic";
 
-export function PlayArea({playerCard, dealerCard, showDealerCards, gameState, showButtons, onHit, onStand}) {
+export function PlayArea({playerCard, dealerCard, gameOver, showDealerCards, gameState, showButtons, onHit, onStand}) {
     return (
         <section className="playArea">
                 <Grid
@@ -24,7 +24,7 @@ export function PlayArea({playerCard, dealerCard, showDealerCards, gameState, sh
                         <Text fontSize="3xl" fontWeight="bold">Dealer: {showDealerCards}</Text>
                     </GridItem>
                     <GridItem colSpan={3} area={'playerCards'}>
-                        <Cards cards={playerCard}/>
+                        <Cards cards={playerCard} gameOver={gameOver} dealer='nej'/>
                     </GridItem>
                     <GridItem colSpan={1} area={'buttons'}>
                         <LightMode>
@@ -35,7 +35,7 @@ export function PlayArea({playerCard, dealerCard, showDealerCards, gameState, sh
                         </LightMode>
                     </GridItem>
                     <GridItem colSpan={3} area={'dealerCards'}>
-                        <Cards cards={dealerCard}/>
+                        <Cards cards={dealerCard} gameOver={gameOver} dealer='ja'/>
                     </GridItem>
                 </Grid>
         </section>
