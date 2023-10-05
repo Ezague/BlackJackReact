@@ -8,7 +8,7 @@ export function checkRoundState(playerCards, dealerCards, gameOver) {
     if (playerHandPoints > 21 || dealerHandPoints == 21 || (playerHandPoints < dealerHandPoints && gameOver == true)) {
         return 'You lost!';
     }
-    if (playerHandPoints == dealerHandPoints) {
+    if (playerHandPoints == dealerHandPoints && gameOver == true) {
         return 'It\'s a draw!';
     }
     return null;

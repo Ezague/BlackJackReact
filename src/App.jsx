@@ -40,6 +40,7 @@ useEffect(() => {
     setShowButtons(false);
     setShowDealerCard(handTotal(dealerCards));
   }
+  setGameOver(true);
   setGameState(status);
 }, [playerCards, dealerCards, gameOver])
 
