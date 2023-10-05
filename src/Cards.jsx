@@ -3,7 +3,7 @@ import { TableContainer, Table, Tbody, Tr, Th } from "@chakra-ui/react";
 
 function CreateCard({card, dealer, gameOver, index}) {
     if (index == 0 && dealer == 'ja' && gameOver == false) {
-        return <Tr><Th>Hidden card</Th></Tr>;
+        return <Tr><Th>Skjult kort</Th></Tr>;
     } else {
         return <Tr key={card.kuloer + card.vaerdi}>
             <Th>
