@@ -17,7 +17,7 @@ const [wins, setWins] = useState(0);
 const [losses, setLosses] = useState(0);
 const [draws, setDraws] = useState(0);
 const [showButtons, setShowButtons] = useState(false);
-const [showDealerCard, setShowDealerCard] = useState('???');
+const [showDealerCard, setShowDealerCard] = useState('');
 const [gameState, setGameState] = useState(null);
 const [gameOver, setGameOver] = useState(false);
 
@@ -40,7 +40,6 @@ useEffect(() => {
     setShowButtons(false);
     setShowDealerCard(handTotal(dealerCards));
   }
-  setGameOver(true);
   setGameState(status);
 }, [playerCards, dealerCards, gameOver])
 
