@@ -35,7 +35,7 @@ Funktionelt BlackJack spil med de mest kendte features fra et rigtigt spil Black
 * Skjul dealerens første kort indtil spillet er afsluttet.
 
 ### Kendte bugs
-*
+* Efter 10 spil reloader spillet blankt, og man skal reload siden.
 
 ### Bug reporting
 * Oplever du fejl i programmet, er du velkommen til at [raise et issue](https://github.com/Ezague/BlackJackReact/issues) her på github, så jeg bliver underrettet om given fejl.
