@@ -29,18 +29,22 @@ useEffect(() => {
     setWins((currentValue) => currentValue + 1);
     setShowButtons(false);
     setShowDealerCard(handTotal(dealerCards));
+    setGameState(status);
   }
   if (status === 'You lost!') {
     setLosses((currentValue) => currentValue + 1);
     setShowButtons(false);
     setShowDealerCard(handTotal(dealerCards));
+    setGameState(status);
   }
   if (status === 'It\'s a draw!') {
     setDraws((currentValue) => currentValue + 1);
     setShowButtons(false);
     setShowDealerCard(handTotal(dealerCards));
+    setGameState(status);
   }
   setGameState(status);
+  return;
 }, [playerCards, dealerCards, gameOver])
 
 const onStartGame = () => {
